@@ -1,104 +1,147 @@
-# Smart Mobile Trash Bin Robot
+<p align="center">
+  <img src="images/banner.png" width="100%">
+</p>
 
-A smart mobile trash bin robot designed to improve waste disposal efficiency in indoor environments such as canteens, corridors, and public spaces. The robot moves autonomously and allows users to dispose waste easily without searching for a fixed bin.
+<h1 align="center">Smart Mobile Trash Bin Robot</h1>
 
-The system combines robotics, sensors, and automation to create a mobile waste collection solution that improves cleanliness and convenience.
+<p align="center">
+Autonomous mobile waste collection robot with dual navigation modes and automatic lid system
+</p>
 
 ---
 
 ## Project Overview
 
-In large canteen areas and public indoor environments, trash bins are usually placed in fixed locations. Many people do not walk to these bins, which results in waste being left on tables or floors.
+The Smart Mobile Trash Bin Robot is an autonomous robotics system designed to improve waste management in indoor environments such as university canteens, corridors, and public areas.
 
-This project introduces a mobile trash bin robot that moves around the environment and provides easy access for waste disposal. The robot stops when a user is detected, opens the lid automatically, and continues moving after the waste is deposited.
+In many crowded environments, trash bins are placed only in fixed locations. People often leave waste on tables or floors instead of walking to the bin. This project introduces a mobile trash bin robot that moves around the environment, making waste disposal easier and reducing litter.
+
+The robot navigates using two different movement modes and automatically opens the lid when a user approaches the bin.
 
 ---
 
-## Key Features
+## Project Demo
 
-• Dual navigation modes  
-• Line following navigation using floor path  
-• Random obstacle avoidance mode  
-• Automatic lid opening using servo motor  
-• User detection using ultrasonic sensor  
-• Trash level monitoring inside the bin  
-• LCD display showing system status  
-• LED indicators for system feedback  
-• Battery powered mobile platform  
-• Mode selection using physical switch  
+Watch the project demonstration video.
+
+https://www.youtube.com/watch?v=YOUR_VIDEO_ID
+
+You can also display the video with a clickable thumbnail.
+
+[![Project Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/maxresdefault.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+
+---
+
+## System Architecture
+
+The system uses an Arduino based control system connected to sensors, motors, and user interface components.
+
+<p align="center">
+  <img src="images/system_architecture.png" width="700">
+</p>
+
+Main modules of the system
+
+• Arduino UNO microcontroller  
+• Motor driver for robot movement  
+• Ultrasonic sensors for detection  
+• Line tracking sensors  
+• Servo motor for lid mechanism  
+• LCD display for system status  
+• Battery power system  
 
 ---
 
 ## Navigation Modes
 
 ### Line Following Mode
-The robot follows a predefined black line path on the floor. This mode is useful for controlled environments where the robot follows a specific route.
+
+The robot follows a predefined black line path placed on the floor. This mode is suitable for structured environments where the robot needs to follow a specific route.
 
 ### Random Obstacle Avoidance Mode
-The robot moves freely and uses an ultrasonic sensor to detect and avoid obstacles while navigating the environment.
+
+The robot moves freely and uses an ultrasonic sensor to detect obstacles. When an obstacle is detected, the robot changes direction and continues moving.
+
+---
+
+## Sensors Used
+
+### Ultrasonic Sensor (HC-SR04)
+
+This sensor measures distance using ultrasonic waves.
+
+Functions
+
+• Detect user hand near the bin  
+• Detect obstacles during movement  
+• Measure trash level inside the bin  
+
+---
+
+### IR Line Sensors
+
+Infrared sensors detect the black line on the floor.
+
+Functions
+
+• Enable line following navigation  
+• Keep the robot on the correct path  
+
+---
+
+### Servo Motor (Lid Control)
+
+A servo motor controls the trash bin lid.
+
+Functions
+
+• Automatically open the lid when a user is detected  
+• Close the lid after a few seconds  
 
 ---
 
 ## Hardware Components
 
-Main components used in this project:
+Main components used in this project
 
 Arduino UNO  
 Arduino Nano  
 Ultrasonic Sensors  
 IR Line Sensors  
-Servo Motor (Lid Control)  
-LCD Display (I2C)  
+Servo Motor  
+LCD Display with I2C module  
 TB6612FNG Motor Driver  
 DC Geared Motors  
-LED Indicators  
+LED indicators  
 Buzzer  
-18650 Battery Pack  
+18650 Battery pack  
 5V Buck Converter  
-Chassis with wheels  
-
----
-
-## System Architecture
-
-The Arduino UNO acts as the main controller and processes data from sensors to control movement and lid operation.
-
-Sensors detect the environment and user interaction while the motor driver controls the robot movement. A servo motor operates the trash bin lid, and an LCD display shows system information such as navigation mode and bin status.
+Robot chassis with wheels  
 
 ---
 
 ## Circuit Diagram
 
-The circuit was designed using a simulation wiring tool and includes connections for sensors, motor drivers, display, and power management.
+The circuit connects sensors, motors, and display modules to the Arduino controller.
 
-Add your circuit image here:
-
-![Circuit Diagram](circuit_diagram.png)
-
----
-
-## Working Logic
-
-1. Robot powers on
-2. System checks selected navigation mode
-3. Robot starts moving based on the selected mode
-4. Ultrasonic sensor checks for user presence
-5. If a user is detected
-6. Robot stops
-7. Lid opens automatically
-8. User deposits waste
-9. Lid closes after a few seconds
-10. Robot continues navigation
+<p align="center">
+  <img src="images/circuit_diagram.png" width="700">
+</p>
 
 ---
 
-## Applications
+## Working Process
 
-Indoor waste management systems  
-University canteens  
-Smart campuses  
-Office environments  
-Research and robotics education  
+1. Robot powers on  
+2. Navigation mode is selected using the switch  
+3. Robot starts moving  
+4. Sensors continuously monitor the environment  
+5. If a user is detected near the bin  
+6. Robot stops  
+7. Lid opens automatically  
+8. User disposes waste  
+9. Lid closes after a short delay  
+10. Robot continues navigation  
 
 ---
 
