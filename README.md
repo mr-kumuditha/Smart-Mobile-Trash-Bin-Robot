@@ -24,11 +24,9 @@ The robot navigates using two different movement modes and automatically opens t
 
 Watch the project demonstration video.
 
-https://www.youtube.com/watch?v=YOUR_VIDEO_ID
 
-You can also display the video with a clickable thumbnail.
+https://github.com/mr-kumuditha/Smart-Mobile-Trash-Bin-Robot/blob/main/docs/demo.mp4
 
-[![Project Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/maxresdefault.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
 
 ---
 
@@ -141,6 +139,4 @@ The circuit connects sensors, motors, and display modules to the Arduino control
 9. Lid closes after a short delay  
 10. Robot continues navigation  
 
----
 
-## Project Structure
