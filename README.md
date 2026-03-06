@@ -36,9 +36,7 @@ You can also display the video with a clickable thumbnail.
 
 The system uses an Arduino based control system connected to sensors, motors, and user interface components.
 
-<p align="center">
-  <img src="images/system_architecture.png" width="700">
-</p>
+
 
 Main modules of the system
 
